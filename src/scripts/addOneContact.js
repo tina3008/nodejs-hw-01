@@ -11,7 +11,7 @@ export const addOneContact = async () => {
     readData.push(db);
 
     await fs.writeFile(PATH_DB, JSON.stringify(readData, null, 2), 'utf8');
-    console.log('The request has been completed');
+    // console.log('The request has been completed');
   } catch (err) {
     console.error('incorrect request', err);
   }

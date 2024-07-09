@@ -8,7 +8,7 @@ export const getAllContacts = async () => {
 };
 
 getAllContacts()
-  .then((data) => console.log(data))
+  .then((data) => JSON.parse(data))
   .catch((error) => console.error(error));
 
 console.log(await getAllContacts());
