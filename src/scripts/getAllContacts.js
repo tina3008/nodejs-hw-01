@@ -8,7 +8,8 @@ export const getAllContacts = async () => {
 };
 
 getAllContacts()
-  .then((data) => JSON.parse(data))
+  .then((data) => JSON.parse(data, undefined, 2))
+  .then((data) => console.log(Array.isArray(data)))
   .catch((error) => console.error(error));
 
 console.log(await getAllContacts());
